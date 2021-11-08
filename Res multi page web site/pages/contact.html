@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University | Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div id="wrongB">Wrong Info! </div>
+    <div id="correctB">Thanks! Your message is Sent</div>
+
+
+    <div class="upper">
+        <h1>Eduford University</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sed eius necessitatibus quae odio explicabo
+            voluptate soluta! Suscipit dignissimos qui ducimus! Natus ea dolorum nihil explicabo cupiditate hic, illo
+            qui.
+        </p>
+
+        <div class="contact-info">
+            <div class="info">
+                <i class="material-icons">home</i>
+                Lorem ipsum dolor sit amet.
+            </div>
+            <div class="info">
+                <i class="material-icons">dashboard</i>
+                Lorem ipsum amet.
+            </div>
+            <div class="info">
+                <i class="material-icons">trending_up</i>
+                Lorem ipsum, dolor sit amet consectetur.
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="form">
+        <h1>Get In Touch...</h1>
+
+        <input id="inp" type="name" placeholder="Your Name">
+        <input id="inp2" type="email" placeholder="Email">
+        <textarea id="form-inp-text" class="form-inp-text" cols="30" rows="10" placeholder="Type your message..."></textarea>
+
+        <div id="contactSend" class="contact-send">Send</div>
+    </div>  
+
+
+    <div class="lower">
+        <h2>About Eduford</h2>
+        <div class="lower-text">
+            <div class="lt1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis labore neque consectetur, sapiente provident exercitationem voluptas temporibus nisi itaque. Aut!
+            </div>
+            <div class="lt2">
+                <h3>lorem</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, at. Ab, tenetur.
+            </div>
+        </div>
+        <div class="lower-nav-links">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="course.html">Course</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <section class="footer">
+        <h2 class="footer-title">Tarunya Ksh</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veritatis vero facilis?<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Pages/about.html">ABOUT</a></li>
+                <li><a href="Pages/course.html">COURSE</a></li>
+                <li><a href="Pages/blog.html">BLOG</a></li>
+                <li><a href="Pages/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="https://twitter.com/?lang=en" target="blank">
+                <img src="https://img.icons8.com/ios-glyphs/60/000000/twitter-circled.png"/>
+            </a>
+            <a href="https://facebook.com" target="blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/facebook-circled--v2.png" style="width: 35px; height: 35px;" />
+            </a>
+            <a href="https://instagram.com" target="blank">
+                <img src="https://img.icons8.com/ios-glyphs/60/000000/instagram-circle.png"/>
+            </a>
+            <a href="https://in.linkedin.com/" target="blank">
+                <img src="https://img.icons8.com/ios-glyphs/60/000000/linkedin-circled--v1.png"/>
+            </a>
+        </div>
+        <div class="end">
+            All Rights Reserved <br> made by tarunyaksh &copy; 2021
+        </div>
+    </section>
+
+    <script>
+        let inp = document.getElementById('inp');
+        let inp2 = document.getElementById('inp2');
+        let textA = document.getElementById('form-inp-text');
+        let send = document.getElementById('contactSend');
+
+        let wrongB = document.getElementById('wrongB')
+        let correctB = document.getElementById('correctB')
+
+        send.addEventListener('click', function () {
+            let v = inp.value 
+            if (v < 2) {
+                correctB.style.display = "none"
+                wrongB.style.display = "flex"
+            }
+            else{
+                correctB.style.display = "flex"
+                wrongB.style.display = "none"
+            }
+
+            setTimeout(() => {
+                wrongB.style.display = "none"
+                correctB.style.display = "none"
+            }, 2000);
+
+            inp.value = '';
+            inp2.value = '';
+            textA.value = '';
+        })
+    </script>
+</body>
+
+</html>
